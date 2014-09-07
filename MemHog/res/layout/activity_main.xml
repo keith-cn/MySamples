@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/ButtonEat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eat 1MB" 
+        android:onClick="onBtnClicked"/>
+
+    <Button
+        android:id="@+id/ButtonEat10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eat 10MB" 
+        android:onClick="onBtnClicked"/>
+
+    <Button
+        android:id="@+id/ButtonEat50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eat 50MB" 
+        android:onClick="onBtnClicked"/>
+
+    <Button
+        android:id="@+id/ButtonEat100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eat 100MB" 
+        android:onClick="onBtnClicked"/>
+
+    <Button
+        android:id="@+id/ButtonShit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shit" 
+        android:onClick="onBtnClicked"/>
+
+    <TextView
+        android:id="@+id/TextViewHowFat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

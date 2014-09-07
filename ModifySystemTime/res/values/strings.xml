@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ModifySystemTime</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Click the following button to modify system time.</string>
+    <string name="btn_1">Add one day</string>
+    <string name="btn_2">Add two day</string>
+    <string name="btn_3">Add 14 day</string>
+    <string name="btn_4">Get system time</string>
+    <string name="btn_5">Close</string>
+
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/media_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/media_folder_label" />
+
+    <TextView
+        android:id="@+id/folder_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/media_folder"
+        android:text="@string/media_folder" />
+
+    <LinearLayout
+        android:id="@+id/media_controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/folder_name"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp" >
+
+        <ImageButton
+            android:id="@+id/prev_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/prev_action"
+            android:src="@drawable/previous" />
+
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/play_action"
+            android:src="@drawable/play_icon" />
+
+        <ImageButton
+            android:id="@+id/stop_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/stop_action"
+            android:src="@drawable/stop_icon" />
+
+        <ImageButton
+            android:id="@+id/next_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/next_action"
+            android:src="@drawable/next" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/media_controls"
+        android:layout_margin="10dp"
+        android:text="@string/no_song" />
+
+    <ProgressBar
+        android:id="@+id/song_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_name"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp" />
+
+    <!-- TODO: animation -->
+
+    <ImageView
+        android:id="@+id/image_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/song_progress"
+        android:layout_below="@id/song_progress"
+        android:layout_marginLeft="28dp"
+        android:src="@drawable/star" />
+
+	<LinearLayout 
+	    android:id="@+id/tab_bar_layout"
+        android:layout_below="@id/image_animation"
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/info" />
+        <TextView
+            android:id="@+id/lyrics"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/lyrics" />
+	</LinearLayout>
+	
+	<!-- 
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_bar_layout" />
+	 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tab_pager"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tab_bar_layout"
+        />
+
+</RelativeLayout>
